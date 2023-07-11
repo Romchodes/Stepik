@@ -50,5 +50,8 @@ while True:
     elif figure == 'круг':
         r = float(input('Введите радиус круга: '))
         circle_square(r)
-    else:
+    elif figure not in ('прямоугольник', 'круг', 'треугольник'):
         print('Неверно введено название фигуры\n---------------')
+    else:
+        print ('Ошибка')
+        break
