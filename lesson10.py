@@ -16,35 +16,39 @@ div — целочисленное деление.
 Обратите внимание, что на вход программе приходят вещественные числа.
 '''
 
-first = float(input())
-second = float(input())
-operation = input()
+
 
 def calculation():
-    if second == 0 and (operation == '/' or operation == 'mod' or operation == 'div'): # можно operation in ('/', 'mod', 'div')
-        print('Деление на 0!')
-    elif operation == 'mod':
-        answer = (first % second)
-        print(answer)
-    elif operation == 'pow':
-        answer = (first ** second)
-        print(answer)
-    elif operation == 'div':
-        answer = (first // second)
-        print(answer)
-    elif operation == '+':
-        answer = (first + second)
-        print(answer)
-    elif operation == '-':
-        answer = (first - second)
-        print(answer)
-    elif operation == '/':
-        answer = (first / second)
-        print(answer)
-    elif operation == '*':
-        answer = (first * second)
-        print(answer)
-    elif operation not in ('+', '-', '/', '*', 'mod', 'pow', 'div'):
-        print('Введена невалидная операция')
+    while True:
+        first = float(input('Введите первое число: '))
+        second = float(input('Введите второе число: '))
+        operation = input('Введите одну из операций (+, -, /, *, mod, pow, div): ')
+        if second == 0 and (operation == '/' or operation == 'mod' or operation == 'div'): # можно operation in ('/', 'mod', 'div')
+            print('Деление на 0!')
+        elif operation == 'mod':
+            answer = (first % second)
+            print('Остаток от деления равен: ', answer)
+        elif operation == 'pow':
+            answer = (first ** second)
+            print('Первое число в степени, равной второму числу, равно: ', answer)
+        elif operation == 'div':
+            answer = (first // second)
+            print('Целочесленное деление первого числа на второе равно: ', answer)
+        elif operation == '+':
+            answer = (first + second)
+            print('Сумма двух чисел равна: ', answer)
+        elif operation == '-':
+            answer = (first - second)
+            print('Разность двух чисел равна: ', answer)
+        elif operation == '/':
+            answer = (first / second)
+            print('Частное двух чисел равна: ', answer)
+        elif operation == '*':
+            answer = (first * second)
+            print('Произведение двух чисел равно: ', answer)
+        elif operation not in ('+', '-', '/', '*', 'mod', 'pow', 'div'):
+            print('Введена невалидная операция')
+        elif type(first) not in (float, int) or type(second) not in (float, int):
+            print('Введено невалидное число')
 
 calculation()
