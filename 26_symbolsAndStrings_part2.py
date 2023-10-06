@@ -32,6 +32,7 @@ is_palindrome = True
 while i < j:
     if s[i] != s[j]:
         is_palindrome = False
+        #break можно добавить, будет работать побыстрее
     i += 1
     j -= 1
 if is_palindrome:
@@ -44,6 +45,7 @@ else:
 '''
 # str = input()
 # rts = str[::-1]
+# можно добавить str.upper() и rts.upper(), чтобы убрать кейс, когда ввели символы разных регистров
 # print(str)
 # print(rts)
 # if str == rts:
