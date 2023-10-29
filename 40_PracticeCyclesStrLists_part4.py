@@ -42,7 +42,8 @@ for i in range(x):
         newMat.append(int(matrix1[i][j]))
     matrix2.append(newMat)
 '''
-отдельно расписал для граничных значений (i[max],j[min]) - элемент слева внизу,
+отдельно расписал для граничных значений
+(i[max],j[min]) - элемент слева внизу,
 (i[min], j[max]) - элемент справа вверху,
 (i[max], j[max]) - элемент справа внизу
 вычисления 
@@ -52,13 +53,13 @@ for i in range(x):
 for i in range(x):
     newnewMat = []
     for j in range(len(matrix1[0])):
-        if (i < (x-1)) and (j < (len(matrix1[0])-1)):
+        if (i < (x-1)) and (j < (len(matrix1[0])-1)): # общий кейс + (i[min], j[min])
             newnewMat.append(matrix2[i-1][j] + matrix2[i+1][j] + matrix2[i][j-1] + matrix2[i][j+1])
-        elif j == (len(matrix1[0]) - 1) and i < (x - 1):
+        elif i < (x - 1) and j == (len(matrix1[0]) - 1): # (i[min], j[max])
             newnewMat.append(matrix2[i][0] + matrix2[i][j-1] + matrix2[i-1][j] + matrix2[i+1][j])
-        elif i == (x - 1) and (j < (len(matrix1[0])-1)):
+        elif i == (x - 1) and (j < (len(matrix1[0])-1)): # (i[max],j[min])
             newnewMat.append(matrix2[i][j+1] + matrix2[i][j - 1] + matrix2[i-1][j] + matrix2[0][j])
-        elif i == (x - 1) and (j == (len(matrix1[0]) - 1)):
+        elif i == (x - 1) and (j == (len(matrix1[0]) - 1)): # (i[max], j[max])
             newnewMat.append(matrix2[i][j-1] + matrix2[i][0] + matrix2[i - 1][j] + matrix2[0][j])
         # else:
         #     newnewMat.append(matrix2[i][0] + matrix2[i][j-1] + matrix2[0][j] + matrix2[i-1][j])
