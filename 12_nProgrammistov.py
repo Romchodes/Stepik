@@ -21,7 +21,7 @@ n (неотрицательное), выводящее это число в ко
 '''
 
 while True:
-    n = input()
+    n = input('Введите целое количество программистов: ')
     lst = list()
     for i in range((len(n))):
         lst.insert(i, n[i])
