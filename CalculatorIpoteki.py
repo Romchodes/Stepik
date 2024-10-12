@@ -10,6 +10,6 @@ def calc():
     srokM = int(srok*12)
     teloKredita = int(summ - pervz)
     mesPlatezh = int(((stavkaM*((1+stavkaM)**srokM))/(((1+stavkaM)**srokM)-1))*(teloKredita))
-    print('Ежемесячный платеж: ', mesPlatezh, 'рублей')
+    print('Ежемесячный платеж: ', mesPlatezh, 'единиц указанной валюты')
 
 calc()
