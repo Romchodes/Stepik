@@ -33,7 +33,8 @@ def my_range(start, stop, step=1):
             x += step
     return res
 
-print(my_range(1, 9)) # параметры функции считываются по порядку, если не заданы явно, тут start будет = 1, а stop = 9
+print(my_range(1, 9)) # параметры функции считываются по порядку, если не заданы явно, тут start будет = 1,
+                                # а stop = 9
 print(my_range(3, 17, 3))
 print(my_range(15, -15, -3))
 print(my_range(stop = 10, start = 1)) # можно непоследовательно указать параметры функции, тогда их нужно явно задать
