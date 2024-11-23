@@ -41,7 +41,7 @@ print('---------')
 a = [0] * 5
 print(a)
 print('---------')
-a = [0 for i in range(5)] # List comperhantion
+a = [0 for i in range(5)] # List comprehantion
 print(a)
 print('---------')
 a = [i * i for i in range(5)]

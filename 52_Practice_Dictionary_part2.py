@@ -28,14 +28,8 @@ a 3
 def countWords():
     str = input()
     str = str.lower().split()
-    print(str)
-    for i in str:
-        x = len(str)
-        if i[x-1] != i[x]:
-            print(i, str.count(i))
-            x += 1
-        continue
-
-
+    uniqueStr = list(set(str)) # функция set берет уникальные значения из списка
+    for i in uniqueStr:
+        print(i, str.count(i))
 
 countWords()
